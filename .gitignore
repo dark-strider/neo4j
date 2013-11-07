@@ -1,0 +1,10 @@
+*.rbc
+*.sassc
+.sass-cache
+**.orig
+rerun.txt
+/.bundle
+/db/*
+/log/*
+/public/assets/*
+/tmp/*
