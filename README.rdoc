@@ -1,0 +1,11 @@
+Пример работы с графовой базой данных Neo4j[http://www.neo4j.org], с использованием драйвера 
+Neo4j.rb[https://github.com/andreasronge/neo4j].
+
+Управление *_relationships_* вынесено в отдельные функции +set+/+setup+, управление *_properties_* доступно через 
+стандартные +edit+/+update+.
+
+Это удобно в плане распределения логики работы с разными типами данных, и при управлении большим количеством 
+_relationships_ и _properties_ в одной модели. Кроме того, упрощается использование одновременно двух БД - 
+*Neo4j* для хранения _relationships_ и <b>ДругаяБД</b> для хранения _properties_.
+
+Скриншоты: schema[https://raw.github.com/dark-strider/neo4j/master/doc/schema.png], neoclipse[https://raw.github.com/dark-strider/neo4j/master/doc/neoclipse.png], app_1[https://raw.github.com/dark-strider/neo4j/master/doc/app_1.png], app_2[https://raw.github.com/dark-strider/neo4j/master/doc/app_2.png], app_3[https://raw.github.com/dark-strider/neo4j/master/doc/app_3.png], web-admin[https://raw.github.com/dark-strider/neo4j/master/doc/webadmin.png].

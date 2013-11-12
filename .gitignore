@@ -4,7 +4,7 @@
 **.orig
 rerun.txt
 /.bundle
-/db/*
-/log/*
-/public/assets/*
-/tmp/*
+/db
+/log
+/public/assets
+/tmp

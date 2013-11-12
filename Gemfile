@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.15'
-gem 'neo4j' #, '2.2.4'
+gem 'neo4j', '2.2.4'
 gem 'jruby-openssl', '0.7.7'
 
 gem 'slim'
