@@ -1,0 +1,15 @@
+h2 Companies
+
+table class='table table-condensed'
+  - @companies.each do |company|
+    tr
+      td 
+        strong = company.name
+        div = company.from.name unless company.from.nil?
+      td
+        = link_to 'Manage workers', [:workers, company], class: 'btn btn-info'
+        = link_to 'Set relations', [:set, company], class: 'btn btn-success'
+        = link_to 'Edit info', [:edit, company], class: 'btn btn-primary'
+        = link_to 'Destroy company', company, method: :delete, confirm: 'Sure..?', class: 'btn btn-danger'
+
+= link_to 'New company', [:new, :company], class: 'btn btn-success'

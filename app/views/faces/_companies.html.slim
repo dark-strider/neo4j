@@ -1,0 +1,10 @@
+b Companies
+
+table class='table table-condensed'
+  - @face.hasCompanies_rels.each do |role|
+    tr
+      td = role.start_node.name
+      td = role.job
+      td
+        = link_to 'Edit info', [:edit, role.start_node, role], class: 'btn btn-primary'
+        = link_to 'Dismiss', [role.start_node, role], method: :delete, confirm: 'Sure..?', class: 'btn btn-danger'

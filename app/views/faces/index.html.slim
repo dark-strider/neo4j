@@ -1,0 +1,8 @@
+h2 Faces
+
+table class='table table-condensed'
+  - @faces.each do |face|
+    tr
+      td = link_to face.name, face
+
+= link_to 'New face', [:new, :face], class: 'btn btn-success'

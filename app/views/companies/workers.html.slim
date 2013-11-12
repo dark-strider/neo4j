@@ -1,0 +1,17 @@
+h3 #{ @company.name } workers
+
+table class='table table-condensed'
+  thead
+    tr
+      td Face
+      td Role in company
+
+  - @company.worker_rels.each do |role|
+    tr
+      td = link_to role.end_node.name, role.end_node
+      td = role.job
+      td
+        = link_to 'Edit info', [:edit, @company, role], class: 'btn btn-primary'
+        = link_to 'Dismiss', [@company, role], method: :delete, confirm: 'Sure..?', class: 'btn btn-danger'
+
+= link_to 'New worker', [:new, @company, :incompany], class: 'btn btn-success'

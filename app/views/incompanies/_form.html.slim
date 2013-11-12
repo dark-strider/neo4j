@@ -1,0 +1,12 @@
+h3 #{ @company.name } worker
+
+= simple_form_for [@company, @incompany] do |f|
+  p 
+    =  label_tag 'face', 'Face'
+    - if @face.is_a?(Face)
+      strong = @face.name
+    - else
+      = select_tag 'face_id', options_from_collection_for_select(@face, :id, :name)
+
+  = f.input :job, input_html: { class: 'span3', maxlength: 20, autofocus: true }
+  == render 'submit', f:f

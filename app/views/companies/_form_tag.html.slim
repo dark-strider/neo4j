@@ -1,0 +1,4 @@
+= form_tag(controller: 'companies', action: 'setup') do
+  =  label_tag 'country', 'Country'
+  = select_tag 'country', options_from_collection_for_select(@countries, :id, :name, @selected[:country])
+  == render 'submit_tag'

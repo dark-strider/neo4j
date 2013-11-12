@@ -1,4 +1,4 @@
-- flash.each do |name, message|
-  div class="alert alert-#{name == :notice ? 'success' : 'error'}"
+- flash.each do |type, message|
+  div class="alert alert-#{type}"
     a class='close' data-dismiss='alert' ×
-    = message
+    strong = message

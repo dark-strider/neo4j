@@ -1,0 +1,12 @@
+= form_tag(controller: 'faces', action: 'setup') do
+
+  =  label_tag 'country', 'Country'
+  = select_tag 'country', options_from_collection_for_select(@countries, :id, :name, @selected[:country])
+  
+  = hidden_field_tag 'friends[]', nil
+  =  label_tag 'friends[]', 'Friends'
+  = select_tag 'friends[]',
+                options_from_collection_for_select(@faces, :id, :name, @selected[:friends]),
+                multiple: :true
+  
+  == render 'submit_tag'

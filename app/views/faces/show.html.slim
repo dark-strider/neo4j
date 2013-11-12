@@ -1,0 +1,9 @@
+h2 #{ @face.name } (#{ @face.from.name unless @face.from.nil? })
+
+== render 'friends'
+== render 'companies'
+
+div class='form-actions'
+  = link_to 'Set relations', [:set, @face], class: 'btn btn-success'
+  = link_to 'Edit info', [:edit, @face], class: 'btn btn-primary'
+  = link_to 'Destroy face', @face, method: :delete, confirm: 'Sure..?', class: 'btn btn-danger'

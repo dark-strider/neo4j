@@ -1,5 +1,15 @@
 /*
- *= require_self
  *= require reset
  *= require bootstrap.min
+ *= require_self
  */
+
+body main {
+  clear: both;
+  width: 767px;
+  margin: 0 auto 25px;
+}
+
+.btn {
+  margin: 1px;
+}

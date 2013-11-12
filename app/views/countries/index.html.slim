@@ -1,0 +1,12 @@
+h2 Countries
+
+table class='table table-condensed'
+  - @countries.each do |country|
+    tr
+      td
+        strong = country.name
+      td
+        = link_to 'Edit info', [:edit, country], class: 'btn btn-primary'
+        = link_to 'Destroy country', country, method: :delete, confirm: 'Sure..?', class: 'btn btn-danger'
+
+= link_to 'New country', [:new, :country], class: 'btn btn-success'

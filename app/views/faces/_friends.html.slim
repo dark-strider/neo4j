@@ -1,0 +1,7 @@
+b Friends
+
+table class='table table-condensed'
+  - @face.rels(:both, 'Face#friends').each do |f|
+    - friend = (f.start_node == @face ? f.end_node : f.start_node)
+    tr
+      td = link_to friend.name, friend
